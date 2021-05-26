@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../style.css">
+	<title>A parlagfűről</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id ="test">
+		<table id ="tabla">
+			<thead>
+			<tr>
+				<th id="sor">
+					<img id="kep1" src="cim.png" width="100%">
+				</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr height ="40px">
+				<td id ="sor">
+					<div id= "nav">
+						<a id="navbar" href="elofordulasa.html">Előfordulása</a>
+						<a id="navbar" href="fejlodese.html">Fejlődése</a>
+						<a id="navbarillegal" href="terjedese.html">Terjedése</a>
+						<a id="navbar" href="allergia.html">Parlagfű allergia</a>
+						<a id="navbar" href="megelozes.html">Megelőzés</a>
+						<a id="navbar" href="">Irtási módszerek</a>
+							<audio id="beep" controls preload="auto">
+								<source src="asd.mp3"></source>
+								<source src="asd.ogg"></source>
+							</audio>
+						<script>
+$(document).ready(function(){
+$("div #navbar")
+  .each(function(i) {
+    if (i != 0) {
+      $("#beep")
+        .clone()
+        .attr("id", "beep" + i)
+        .appendTo($(this).parent());
+    }
+    $(this).data("beeper", i);
+  })
+  .mouseenter(function() {
+    $("#beep" + $(this).data("beeper"))[0].play();
+  });
+$("#beep").attr("id", "beep0");
+});
+						</script>
+							<audio id="illegal" controls preload="auto">
+								<source src="illegal.mp3"></source>
+								<source src="illegal.ogg"></source>
+							</audio>
+						<script>
+$(document).ready(function(){
+$("div #navbarillegal")
+  .each(function(i) {
+	if (i != 0) {
+	  $("illegal")
+		.clone()
+		.attr("id", "illegal" + i)
+		.appendTo($(this).parent());
+	}
+	$(this).data("illegally", i);
+  })
+  .mouseenter(function() {
+	$("#illegal" + $(this).data("illegally"))[0].play();
+  });
+$("#illegal").attr("id", "illegal0");
+		});
+						</script>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td id="sor">
+					<h1 class ="lightfont" >Irtási módszerek</h1>
+<img id = "kep" src = "gyomlalas.png" alt = "Gyomlálás" align ="right">
+<p class = "lightfont">A parlagfű irtását folyamatosan kell végezni. A növényt a virágzása előtt kell elpusztítani, hogy ne szórhasson virágport, és ne érlelhessen termést.</p>
+<ul>
+<li class = "lightfont"><b>Gyomlálás:</b> A virágzó parlagfű irtását ne bízzuk gyerekekre, mert az erős pollenkoncentráció a levegőben kiválthatja a lappangó allergiát. Kerülni kell a virágzó növény közvetlen érintését, mert az is allergiás reakciót válthat ki. Ilyenkor a kézi irtást kesztyűben kell végezni.</li>
+<li class = "lightfont"><b>Kaszálás:</b> A környezetet és a költségeket is leginkább kímélő eljárás. A fiatal növényeket tömeges megjelenésük után, minél előbb tanácsos kaszálni. A talajszinten a gyökérnyaki résznél kell a növény szárát elvágni. Ez a legbiztosabb módszer, mivel a növények nem tudnak újrahajtani. Ha ezzel elkéstünk, az egyszeri kaszálás már nem eredményezi a parlagfű kiirtását, mert a növény az alacsonyan elhelyezkedő oldalrügyeiből 3-4 oldalhajtást nevel, és pár hét múlva újra virágba borul. Általában három kaszálás biztosít megfelelő eredményt. Ha a háromszori kaszálás nem valósítható meg, úgy az egyszeri kaszálás a virágzást közvetlenül megelőző időszakban a leghatékonyabb.</li>
+<li class = "lightfont"><b>Vegyszeres gyomirtás:</b> A parlagfű terjedése gyomirtó szerek használata nélkül nem állítható meg. Azonban vegyszeres kezeléseket csak olyan helyen szabad alkalmazni, ahol ez embereket és főként gyermekeket semmilyen módon nem veszélyeztet. Az irtás a korai növekedési fázisban a hatleveles állapotáig hatásos.</li>
+<li class = "lightfont"><b>Életlehetőségeinek csökkentése:</b> Mivel a parlagfű zárt növénytakaró mellett nem fejlődik, kiszorítható jól fejlődő növényzet telepítésével, és fűmagvetéssel, gyep telepítésével. A dús vegetáció mellett a parlagfű ki fog szorulni.</li>
+</ul>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+<footer id="lab">
+    <div id="labj">
+        <a id = "flink" href="../parlagfu.html">Vissza a főoldalra</a>
+    </div>
+    </footer>
+</html>

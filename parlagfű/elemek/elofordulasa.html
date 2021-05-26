@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../style.css">
+	<title>A parlagfűről</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id ="test">
+		<table id ="tabla">
+			<thead>
+			<tr>
+				<th id="sor">
+					<img id="kep1" src="cim.png" width="100%">
+				</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr height ="40px">
+				<td id ="sor">
+					<div id= "nav">
+						<a id="navbar" href="">Előfordulása</a>
+						<a id="navbar" href="fejlodese.html">Fejlődése</a>
+						<a id="navbarillegal" href="terjedese.html">Terjedése</a>
+						<a id="navbar" href="allergia.html">Parlagfű allergia</a>
+						<a id="navbar" href="megelozes.html">Megelőzés</a>
+						<a id="navbar" href="irtas.html">Irtási módszerek</a>
+							<audio id="beep" controls preload="auto">
+								<source src="asd.mp3"></source>
+								<source src="asd.ogg"></source>
+							</audio>
+						<script>
+$(document).ready(function(){
+$("div #navbar")
+  .each(function(i) {
+    if (i != 0) {
+      $("#beep")
+        .clone()
+        .attr("id", "beep" + i)
+        .appendTo($(this).parent());
+    }
+    $(this).data("beeper", i);
+  })
+  .mouseenter(function() {
+    $("#beep" + $(this).data("beeper"))[0].play();
+  });
+$("#beep").attr("id", "beep0");
+});
+						</script>
+							<audio id="illegal" controls preload="auto">
+								<source src="illegal.mp3"></source>
+								<source src="illegal.ogg"></source>
+							</audio>
+						<script>
+$(document).ready(function(){
+$("div #navbarillegal")
+  .each(function(i) {
+	if (i != 0) {
+	  $("illegal")
+		.clone()
+		.attr("id", "illegal" + i)
+		.appendTo($(this).parent());
+	}
+	$(this).data("illegally", i);
+  })
+  .mouseenter(function() {
+	$("#illegal" + $(this).data("illegally"))[0].play();
+  });
+$("#illegal").attr("id", "illegal0");
+		});
+						</script>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td id="sor">
+					<h1 class ="lightfont" >Előfordulása</h1>
+					<p class ="lightfont">Őshazája Észak-Amerika déli területein található. Bár az Észak-amerikai kontinensen őshonos, annak északi területein, pl. Kanadában hozzánk hasonlóan invazív gyomnövényként tartják számon, hiszen erőteljes terjedésére csak az utóbbi évtizedekben került sor. Európában először Franciaországban jelent meg. Bár botanikus kertekben már az 1700-as években is megtalálható volt, és nem zárható ki, hogy némely esetben innen kiszabadulva terjedésbe kezdhetett, ám a vizsgálatok szerint a fő betelepülése csak az 1860-as években kezdődött meg, valószínűleg vöröshere-, esetleg búza vetőmag-, illetve burgonyaszállítmányokkal. A korai terjedés elsősorban kikötők, illetve vasútvonalak környékén volt megfigyelhető. További nagy fokú behurcolása az első világháború során történt; lószállítmányok takarmányában kerülhetett be nagy mennyiségű parlagfűmag.</p>
+					<h3 class ="lightfont" >Termelőhelyi igényei</h3>
+					<p class ="lightfont">Talajra viszonylag igénytelen, de leginkább az enyhén savanyú, homokos vályogtalajt kedveli. Leggyakrabban utak és vasúti sínek mentén, parlagon hagyott területeken, nem megfelelően gyomirtott, bolygatott földeken fordul elő (innen a neve is). A meleg éghajlatot, a fényt, és a nyári csapadékot kedveli, de szárazságtűrése kiváló. A sűrű növényzetet, fákat nem kedveli. A tengerszinttől mért 400 méteres magasságig fordul elő.[1] Nagy növekedési, szaporodási erélye révén számra ideális körülmények között könnyen felülkerekedik más növényeken.</p>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+<footer id="lab">
+    <div id="labj">
+        <a id = "flink" href="../parlagfu.html">Vissza a főoldalra</a>
+    </div>
+    </footer>
+</html>

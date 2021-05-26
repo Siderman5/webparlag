@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>A parlagfűről</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id ="test">
+		<table id ="tabla">
+			<thead>
+			<tr>
+				<th id="sor">
+					<img id="kep1" src="elemek/cim.png" width="100%">
+				</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr height ="40px">
+				<td id ="sor">
+					<div id= "nav">
+						<a id="navbar" href="elemek/elofordulasa.html">Előfordulása</a>
+						<a id="navbar" href="elemek/fejlodese.html">Fejlődése</a>
+						<a id="navbarillegal" href="elemek/terjedese.html">Terjedése</a>
+						<a id="navbar" href="elemek/allergia.html">Parlagfű allergia</a>
+						<a id="navbar" href="elemek/megelozes.html">Megelőzés</a>
+						<a id="navbar" href="elemek/irtas.html">Irtási módszerek</a>
+							<audio id="beep" controls preload="auto">
+								<source src="elemek/asd.mp3"></source>
+								<source src="elemek/asd.ogg"></source>
+							</audio>
+						<script>
+$(document).ready(function(){
+$("div #navbar")
+  .each(function(i) {
+    if (i != 0) {
+      $("#beep")
+        .clone()
+        .attr("id", "beep" + i)
+        .appendTo($(this).parent());
+    }
+    $(this).data("beeper", i);
+  })
+  .mouseenter(function() {
+    $("#beep" + $(this).data("beeper"))[0].play();
+  });
+$("#beep").attr("id", "beep0");
+});
+						</script>
+							<audio id="illegal" controls preload="auto">
+								<source src="elemek/illegal.mp3"></source>
+								<source src="elemek/illegal.ogg"></source>
+							</audio>
+						<script>
+$(document).ready(function(){
+$("div #navbarillegal")
+  .each(function(i) {
+	if (i != 0) {
+	  $("illegal")
+		.clone()
+		.attr("id", "illegal" + i)
+		.appendTo($(this).parent());
+	}
+	$(this).data("illegally", i);
+  })
+  .mouseenter(function() {
+	$("#illegal" + $(this).data("illegally"))[0].play();
+  });
+$("#illegal").attr("id", "illegal0");
+		});
+						</script>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td id="sor">
+					<h1 class ="lightfont" >A növényről</h1>
+<p class = "lightfont">A parlagfű (Ambrosia artemisiifolia) kétszikű, 20–140 cm magas, terebélyes, ágas egyéves gyom. Központi egyenes, tompa négy élű szárral rendelkezik, amelynek sűrű oldalhajtásai vannak. A talajhoz közeli néhány cm-es részen 2-3 elágazása is lehetséges. Magassága változatos, a kifejlett növény zárt és magas növénykultúrában, kukorica- vagy napraforgótáblákban a 150 cm magasságot is elérheti.</p>
+<p class = "lightfont">Levelei 1 vagy 2-szeresen szárnyasan szeldeltek, kétoldalt sűrűn szőrözöttek. A szőrök a levél fonákján hosszabbak. A levél színe sötétzöld, fonákja szürkészöld. A sárga színű 4–5 mm-es porzós fészkek, a legfelső hajtások végén, rövid kocsányon ülnek. A fészkek 10-15 virágot tartalmaznak.</p>
+<p class = "lightfont">Virágpora súlyos allergiát okoz. A termős virágok a porzósok alatti legközelebbi levél hónaljában találhatóak. Termése 2–4 mm hosszú, szürke, szív alakú. Egy fogazott burok takarja a termő részt, amely az érés után a terméssel együtt lehullik. A virágok aránya a növényzet sűrűsége szerint változik.</p>
+<p class = "lightfont">Ritka állományban inkább a termős, sűrű állományban a porzós virágok dominálnak. Igénytelen. Nagy növekedési, szaporodási erélye révén könnyen felülkerekedik más növényeken.</p>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
